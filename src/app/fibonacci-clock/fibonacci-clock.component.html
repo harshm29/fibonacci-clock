@@ -1,0 +1,98 @@
+<div class="main-container">
+  <div class="p-card">
+    <div class="card-title-box">
+      <h3>Fibonacci - Clock</h3>
+    </div>
+
+    <div class="fib-clock-container d-flex">
+      <div>
+        <div class="d-flex">
+          <div
+            class="box box-2"
+            [ngClass]="{
+              'red-box': colorsArray[2] === 'red',
+              'green-box': colorsArray[2] === 'green',
+              'blue-box': colorsArray[2] === 'blue'
+            }"
+          >
+            2
+          </div>
+          <div>
+            <div
+              class="box box-1"
+              [ngClass]="{
+                'red-box': colorsArray[0] === 'red',
+                'green-box': colorsArray[0] === 'green',
+                'blue-box': colorsArray[0] === 'blue'
+              }"
+            >
+              1
+            </div>
+            <div
+              class="box box-1"
+              [ngClass]="{
+                'red-box': colorsArray[1] === 'red',
+                'green-box': colorsArray[1] === 'green',
+                'blue-box': colorsArray[1] === 'blue'
+              }"
+            >
+              1
+            </div>
+          </div>
+        </div>
+        <div
+          class="box box-3"
+          [ngClass]="{
+            'red-box': colorsArray[3] === 'red',
+            'green-box': colorsArray[3] === 'green',
+            'blue-box': colorsArray[3] === 'blue'
+          }"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="box box-5"
+        [ngClass]="{
+          'red-box': colorsArray[4] === 'red',
+          'green-box': colorsArray[4] === 'green',
+          'blue-box': colorsArray[4] === 'blue'
+        }"
+      >
+        5
+      </div>
+    </div>
+
+    <div class="btns-box">
+      <div>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Back"
+          (click)="back()"
+          class="p-button-secondary"
+        ></button>
+      </div>
+      <h1>{{ current_time | date : "HH:mm" }}</h1>
+      <div>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Next"
+          (click)="next()"
+          class="p-button-info"
+        ></button>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>
+        © Copyright,
+        <a href="https://www.linkedin.com/in/harshm29/" target="_blank"
+          >Harsh</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
